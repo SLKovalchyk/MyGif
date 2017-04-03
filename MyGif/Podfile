@@ -1,0 +1,10 @@
+platform :ios, '9.0'
+use_frameworks!
+
+def all_pods
+	pod 'Alamofire', '~> 4.4'
+end
+
+target "MyGif" do
+    all_pods
+end
