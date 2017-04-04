@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tCZ-qX-6Sw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JJB-zX-8dD">
+            <objects>
+                <navigationController id="tCZ-qX-6Sw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nem-Eh-WGP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FqC-gH-aIM" kind="relationship" relationship="rootViewController" id="C91-Pc-OdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlE-YH-SqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="-26"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="CRU-X1-rOx">
+            <objects>
+                <collectionViewController id="FqC-gH-aIM" customClass="UserImagesCollectionViewController" customModule="MyGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IIg-EK-GOK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AfV-4L-p1R">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="Nrx-Ax-vq4">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="FqC-gH-aIM" id="kek-oj-hZ6"/>
+                            <outlet property="delegate" destination="FqC-gH-aIM" id="FM9-s2-RXX"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Images" id="wlt-f9-1cN">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="add" id="Xn8-EW-kge">
+                                <connections>
+                                    <segue destination="aU6-jO-FsZ" kind="show" id="jsj-IX-K1C"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="play" id="Yih-5Y-fC5">
+                                <connections>
+                                    <action selector="showGifPressed:" destination="FqC-gH-aIM" id="LMZ-Xv-9RC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlU-v5-Szj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="-25"/>
+        </scene>
+        <!--Show Gif View Controller-->
+        <scene sceneID="lxL-H4-oJg">
+            <objects>
+                <viewController storyboardIdentifier="gifVC" id="CPs-ZY-JJD" customClass="ShowGifViewController" customModule="MyGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tNT-ks-2EQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fpZ-W8-pks"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AwG-Mh-4Hy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="q3n-33-hdH">
+                                <rect key="frame" x="37.5" y="221" width="300" height="225"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="q3n-33-hdH" firstAttribute="centerY" secondItem="AwG-Mh-4Hy" secondAttribute="centerY" id="Dva-Yf-402"/>
+                            <constraint firstItem="q3n-33-hdH" firstAttribute="height" secondItem="AwG-Mh-4Hy" secondAttribute="width" multiplier="3:5" id="RUf-ph-Hf5"/>
+                            <constraint firstItem="q3n-33-hdH" firstAttribute="width" secondItem="AwG-Mh-4Hy" secondAttribute="width" multiplier="4:5" id="hJL-Bn-MLt"/>
+                            <constraint firstItem="q3n-33-hdH" firstAttribute="centerX" secondItem="AwG-Mh-4Hy" secondAttribute="centerX" id="xJ4-ew-cQ5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7g5-7f-kII" appends="YES" id="MyP-MR-ID8"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="q3n-33-hdH" id="rJr-Ot-sJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTS-AV-lbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7g5-7f-kII">
+                    <connections>
+                        <action selector="close:" destination="CPs-ZY-JJD" id="hHD-WC-o0q"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="193" y="662"/>
+        </scene>
+        <!--Add image-->
+        <scene sceneID="6Sh-hS-w3B">
+            <objects>
+                <viewController id="aU6-jO-FsZ" customClass="AddImageViewController" customModule="MyGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g0W-g7-cwV"/>
+                        <viewControllerLayoutGuide type="bottom" id="f6J-RO-K3N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VEa-sB-a3C">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-L0-R9X" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHS-pB-qjB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="QRX-yD-Odk">
+                                                <rect key="frame" x="67" y="24" width="240" height="128"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="BCX-tV-GYP"/>
+                                                    <constraint firstAttribute="width" constant="240" id="Qc4-AY-Gya"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="3ta-cM-ZR5" appends="YES" id="13G-zc-iaw"/>
+                                                </connections>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1s-1h-aNK" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="40" y="176" width="295" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Xu9-rq-Gcc"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#hasgtag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-T6-wqn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="40" y="240" width="295" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="d1V-AL-n7E"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="QRX-yD-Odk" firstAttribute="top" secondItem="xHS-pB-qjB" secondAttribute="top" constant="24" id="0Bq-CZ-R9K"/>
+                                            <constraint firstAttribute="trailing" secondItem="E1s-1h-aNK" secondAttribute="trailing" constant="40" id="0Kq-Op-E9D"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fea-T6-wqn" secondAttribute="trailing" constant="40" id="3k2-oo-j8U"/>
+                                            <constraint firstItem="Fea-T6-wqn" firstAttribute="leading" secondItem="xHS-pB-qjB" secondAttribute="leading" constant="40" id="Gua-Vf-yP6"/>
+                                            <constraint firstItem="E1s-1h-aNK" firstAttribute="leading" secondItem="xHS-pB-qjB" secondAttribute="leading" constant="40" id="P1H-td-dyF"/>
+                                            <constraint firstItem="E1s-1h-aNK" firstAttribute="top" secondItem="QRX-yD-Odk" secondAttribute="bottom" constant="24" id="SUy-rq-LPU"/>
+                                            <constraint firstItem="QRX-yD-Odk" firstAttribute="centerX" secondItem="xHS-pB-qjB" secondAttribute="centerX" id="bow-fV-5wA"/>
+                                            <constraint firstItem="Fea-T6-wqn" firstAttribute="top" secondItem="E1s-1h-aNK" secondAttribute="bottom" constant="24" id="cfS-dN-wnq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xHS-pB-qjB" secondAttribute="trailing" id="46K-88-7mW"/>
+                                    <constraint firstItem="xHS-pB-qjB" firstAttribute="leading" secondItem="aIr-L0-R9X" secondAttribute="leading" id="H7h-GT-Xwx"/>
+                                    <constraint firstItem="xHS-pB-qjB" firstAttribute="top" secondItem="aIr-L0-R9X" secondAttribute="top" id="dvt-Oi-60J"/>
+                                    <constraint firstAttribute="bottom" secondItem="xHS-pB-qjB" secondAttribute="bottom" id="hFa-94-ZDi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f6J-RO-K3N" firstAttribute="top" secondItem="aIr-L0-R9X" secondAttribute="bottom" id="BMc-YR-1uG"/>
+                            <constraint firstAttribute="trailing" secondItem="aIr-L0-R9X" secondAttribute="trailing" id="GSQ-DU-219"/>
+                            <constraint firstItem="aIr-L0-R9X" firstAttribute="top" secondItem="g0W-g7-cwV" secondAttribute="bottom" id="Rqd-zk-Cmd"/>
+                            <constraint firstItem="xHS-pB-qjB" firstAttribute="height" secondItem="VEa-sB-a3C" secondAttribute="height" priority="250" id="ahR-dD-BxK"/>
+                            <constraint firstItem="aIr-L0-R9X" firstAttribute="leading" secondItem="VEa-sB-a3C" secondAttribute="leading" id="iZI-dD-tSd"/>
+                            <constraint firstItem="xHS-pB-qjB" firstAttribute="width" secondItem="VEa-sB-a3C" secondAttribute="width" id="tHy-am-lee"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Add image" id="Cjy-uC-j8A">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Yoj-IO-A0f">
+                            <connections>
+                                <action selector="savePressed:" destination="aU6-jO-FsZ" id="QX0-CO-dNT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="E1s-1h-aNK" id="27H-CX-hDf"/>
+                        <outlet property="hasgtagtextField" destination="Fea-T6-wqn" id="50Y-Zj-z2R"/>
+                        <outlet property="imageView" destination="QRX-yD-Odk" id="wMs-GE-bPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5Z-dx-x7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3ta-cM-ZR5">
+                    <connections>
+                        <action selector="addPhotoPressed:" destination="aU6-jO-FsZ" id="KWf-Xl-E41"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="945" y="-26"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholderImage" width="700" height="390"/>
+    </resources>
+</document>

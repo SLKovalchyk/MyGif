@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kImageCellReuseID" id="gTV-IL-0wX" customClass="ImageCollectionViewCell" customModule="MyGif" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="210" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="6Lh-NJ-PPT">
+                        <rect key="frame" x="0.0" y="0.0" width="210" height="143"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joP-cP-FvI">
+                        <rect key="frame" x="8" y="147" width="194" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bit-tN-jVL">
+                        <rect key="frame" x="8" y="169.5" width="194" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="joP-cP-FvI" firstAttribute="top" secondItem="6Lh-NJ-PPT" secondAttribute="bottom" constant="4" id="564-xh-aM5"/>
+                <constraint firstAttribute="trailing" secondItem="joP-cP-FvI" secondAttribute="trailing" constant="8" id="AnJ-VE-g1j"/>
+                <constraint firstAttribute="trailing" secondItem="6Lh-NJ-PPT" secondAttribute="trailing" id="Dlg-st-IAM"/>
+                <constraint firstItem="bit-tN-jVL" firstAttribute="top" secondItem="joP-cP-FvI" secondAttribute="bottom" constant="2" id="Dvu-8u-fcC"/>
+                <constraint firstAttribute="bottom" secondItem="bit-tN-jVL" secondAttribute="bottom" id="JFf-1e-RUL"/>
+                <constraint firstItem="6Lh-NJ-PPT" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="3:4" id="Pwj-Ow-dSN"/>
+                <constraint firstAttribute="trailing" secondItem="bit-tN-jVL" secondAttribute="trailing" constant="8" id="XYY-uo-0hp"/>
+                <constraint firstItem="6Lh-NJ-PPT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ysd-0V-Ub7"/>
+                <constraint firstItem="joP-cP-FvI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Zgq-Ek-TBz"/>
+                <constraint firstItem="bit-tN-jVL" firstAttribute="height" secondItem="joP-cP-FvI" secondAttribute="height" id="tCl-nw-KpE"/>
+                <constraint firstItem="bit-tN-jVL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="u8Y-WN-WLV"/>
+                <constraint firstItem="6Lh-NJ-PPT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yfA-qt-EIs"/>
+            </constraints>
+            <size key="customSize" width="210" height="190"/>
+            <connections>
+                <outlet property="imageView" destination="6Lh-NJ-PPT" id="MJn-sm-Dv0"/>
+                <outlet property="locationLabel" destination="bit-tN-jVL" id="y1M-u9-wwi"/>
+                <outlet property="titleLabel" destination="joP-cP-FvI" id="u3I-Nh-afr"/>
+            </connections>
+            <point key="canvasLocation" x="-130" y="161"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="placeholderImage" width="700" height="390"/>
+    </resources>
+</document>

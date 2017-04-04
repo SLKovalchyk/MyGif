@@ -9,7 +9,42 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyGif.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SkyFloatingLabelTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TPKeyboardAvoiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>088D560A3A22A9918A997AA30C18DDDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A080A5F3761D0B774FD810C1475E893</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E2288CBBF1312E46E178883D1588C0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4AF09C625265AC870235AD86F87A4ACB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78A2720D79EC21A67CFE537C5B85048F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B57AFEF46E912EF41AD5C752FA643F96</key>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB57EF7D8B23701455085EC663E5FA40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B82AC1E18D568FC9BF8FBC6839AAFA23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
